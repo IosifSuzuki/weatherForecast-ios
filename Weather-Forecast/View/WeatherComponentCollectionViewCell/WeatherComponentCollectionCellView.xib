@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherComponentCollectionCellView" id="gTV-IL-0wX" customClass="WeatherComponentCollectionCellView" customModule="Weather_Forecast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="179" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="179" height="223"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1sT-fa-msl">
+                        <rect key="frame" x="8" y="8" width="163" height="207"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbC-yz-VpX">
+                                <rect key="frame" x="0.0" y="0.0" width="163" height="20.333333333333332"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Labelfff">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-mM-eCc">
+                                <rect key="frame" x="0.0" y="20.333333333333336" width="163" height="127.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-JI-22e">
+                                <rect key="frame" x="0.0" y="147.66666666666666" width="163" height="59.333333333333343"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sxb-YT-4rE">
+                                        <rect key="frame" x="64" y="-3.6666666666666679" width="35" height="43.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="S1d-2y-MoE"/>
+                                            <constraint firstAttribute="width" secondItem="sxb-YT-4rE" secondAttribute="height" multiplier="1:1" id="mIl-LO-FeQ"/>
+                                        </constraints>
+                                        <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csU-Je-VRg">
+                                        <rect key="frame" x="61" y="39" width="41.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1sT-fa-msl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="6YV-hi-QAd"/>
+                <constraint firstAttribute="bottom" secondItem="1sT-fa-msl" secondAttribute="bottom" constant="8" id="IOd-lN-c6K"/>
+                <constraint firstItem="1sT-fa-msl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="oEk-WB-lnb"/>
+                <constraint firstAttribute="trailing" secondItem="1sT-fa-msl" secondAttribute="trailing" constant="8" id="wj6-wo-R0B"/>
+            </constraints>
+            <size key="customSize" width="179" height="223"/>
+            <connections>
+                <outlet property="temperatureLabel" destination="csU-Je-VRg" id="0HU-zm-Yes"/>
+                <outlet property="timeLabel" destination="YbC-yz-VpX" id="9HO-8E-qqQ"/>
+                <outlet property="weatherIconImageView" destination="sxb-YT-4rE" id="zLr-n4-i6d"/>
+            </connections>
+            <point key="canvasLocation" x="73.07692307692308" y="82.109004739336484"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.rain" catalog="system" width="126" height="128"/>
+    </resources>
+</document>
